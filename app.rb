@@ -1,16 +1,16 @@
-require "sinatra"
-require "braintree"
-require './helpers/pretty_print.rb'
+require 'sinatra'
+require 'braintree'
+require_relative 'helpers/pretty_print.rb'
 
 class Application < Sinatra::Base
-  helpers PrettyPrint
+  helpers Demo::PrettyPrint
 
-  get "/" do
+  get '/' do
     configure
     erb :index
   end
 
-  post "/process" do
+  post '/process' do
     configure
 
     result = Braintree::Customer.create(
@@ -21,9 +21,7 @@ class Application < Sinatra::Base
         options: {
           verify_card: true
         },
-      },
-      first_name: params[:first_name],
-      last_name: params[:last_name]
+      }
     )
 
     if result.success?
@@ -38,10 +36,10 @@ class Application < Sinatra::Base
         @subscription = result.subscription
         erb :process
       else
-        "Could not create the subscription"
+        'Could not create the subscription'
       end
     else
-      "Could not create the customer"
+      'Could not create the customer'
     end
   end
 
@@ -49,8 +47,8 @@ class Application < Sinatra::Base
 
   def configure
     Braintree::Configuration.environment = :sandbox
-    Braintree::Configuration.merchant_id = "ffdqc9fyffn7yn2j"
-    Braintree::Configuration.public_key = "qj65nndbnn6qyjkp"
-    Braintree::Configuration.private_key = "a3de3bb7dddf68ed3c33f4eb6d9579ca"
+    Braintree::Configuration.merchant_id = 'ffdqc9fyffn7yn2j'
+    Braintree::Configuration.public_key = 'qj65nndbnn6qyjkp'
+    Braintree::Configuration.private_key = 'a3de3bb7dddf68ed3c33f4eb6d9579ca'
   end
 end
