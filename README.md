@@ -2,8 +2,6 @@
 
 This is an example of the Braintree API using the official Ruby SDK in Sinatra to set up a subscription.
 
-This branch includes a lot of files for the purpose of testing. To see a simplified example please switch to the [simplified](https://github.com/commercefactory/braintree-subscription-ruby/tree/simplified) branch.
-
 ## Technology
 
 This demo uses
@@ -23,14 +21,3 @@ This demo uses
   * Expiration date: `11/2020`
 * Click submit
 * You will receive a message that says __"Payment Success"__
-
-## Running the test
-
-* Requirement: [Firefox](http://getfirefox.com) for [Selenium](http://seleniumhq.org)
-* Run `bundle` to install all dependencies
-* Run `rake` to test the app
-
-## Useful links
-
-* [The Braintree Ruby SDK](https://www.braintreepayments.com/docs/ruby)
-* [The Braintree Sandbox with Ruby](https://www.braintreepayments.com/docs/ruby/reference/sandbox)
