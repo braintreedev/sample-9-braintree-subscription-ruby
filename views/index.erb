@@ -38,7 +38,7 @@
       <div class='form-group'>
         <label class='col-sm-3 control-label'>Plan</label>
         <div class='col-sm-9'>
-          <select name='plan' class='form-control'>
+          <select name='plan' class='form-control' id='plan'>
             <% Braintree::Plan.all.each do |plan| %>
               <option value='<%= plan.id %>'><%= plan.name %> ($<%= plan.price.to_i %>/month)</option>
             <% end %>
