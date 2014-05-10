@@ -29,3 +29,8 @@ This demo uses
 * Requirement: [Firefox](http://getfirefox.com) for [Selenium](http://seleniumhq.org)
 * Run `bundle` to install all dependencies
 * Run `rake` to test the app
+
+## Useful links
+
+* [The Braintree Ruby SDK](https://www.braintreepayments.com/docs/ruby)
+* [The Braintree Sandbox with Ruby](https://www.braintreepayments.com/docs/ruby/reference/sandbox)
