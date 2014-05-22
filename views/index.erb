@@ -42,7 +42,6 @@
             <% Braintree::Plan.all.each do |plan| %>
               <option value='<%= plan.id %>'><%= plan.name %> ($<%= plan.price.to_i %>/month)</option>
             <% end %>
-            option
           </select>
         </div>
       </div>
