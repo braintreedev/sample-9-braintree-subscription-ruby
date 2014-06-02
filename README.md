@@ -1,5 +1,7 @@
 # Using the Braintree API in Sinatra to process a subscription payment
 
+[![Build Status](https://travis-ci.org/commercefactory/009-braintree-subscription-ruby.svg?branch=master)](https://travis-ci.org/commercefactory/009-braintree-subscription-ruby)
+
 This is an example of the Braintree API using the official Ruby SDK in Sinatra to set up a subscription.
 
 This branch includes a lot of files for the purpose of testing. To see a simplified example please switch to the [simplified](https://github.com/commercefactory/braintree-subscription-ruby/tree/simplified) branch.
