@@ -5,14 +5,16 @@ require_relative 'helpers/pretty_print.rb'
 class Application < Sinatra::Base
   helpers Demo::PrettyPrint
 
+  Braintree::Configuration.environment = :sandbox
+  Braintree::Configuration.merchant_id = 'ffdqc9fyffn7yn2j'
+  Braintree::Configuration.public_key = 'qj65nndbnn6qyjkp'
+  Braintree::Configuration.private_key = 'a3de3bb7dddf68ed3c33f4eb6d9579ca'
+
   get '/' do
-    configure
     erb :index
   end
 
   post '/process' do
-    configure
-
     result = Braintree::Customer.create(
       credit_card: {
         number: params[:number],
@@ -41,14 +43,5 @@ class Application < Sinatra::Base
     else
       'Could not create the customer'
     end
-  end
-
-  private
-
-  def configure
-    Braintree::Configuration.environment = :sandbox
-    Braintree::Configuration.merchant_id = 'ffdqc9fyffn7yn2j'
-    Braintree::Configuration.public_key = 'qj65nndbnn6qyjkp'
-    Braintree::Configuration.private_key = 'a3de3bb7dddf68ed3c33f4eb6d9579ca'
   end
 end
