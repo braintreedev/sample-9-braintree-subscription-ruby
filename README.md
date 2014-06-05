@@ -14,17 +14,22 @@ This demo uses
 * The [Sinatra](http://www.sinatrarb.com/) web framework
 * The [Braintree Ruby SDK](https://www.braintreepayments.com/docs/ruby)
 
-## Running the demo
+## Demo
 
-* Run `bundle` to install all dependencies
-* Run `rackup` to start the app
-* Visit `http://127.0.0.1:9292/` in your browser
+* Visit [9.commercefactory.org](http://9.commercefactory.org)
 * Fill in the following credentials:
   * Number: `4111 1111 1111 1111`
   * CVV: `123`
   * Expiration date: `11/2020`
 * Click submit
 * You will receive a message that says __"Payment Success"__
+
+## Running the demo locally
+
+* Run `bundle` to install all dependencies
+* Run `rackup` to start the app
+* Visit `http://127.0.0.1:9292/` in your browser
+* Proceed as above
 
 ## Running the test
 
