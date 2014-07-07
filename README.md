@@ -13,8 +13,8 @@ This demo uses
 ## Running the demo
 
 * Run `bundle` to install all dependencies
-* Run `rackup` to start the app
-* Visit `http://127.0.0.1:9292/` in your browser
+* Run `ruby app.rb` to start the app
+* Visit `http://127.0.0.1:4567/` in your browser
 * Fill in the following credentials:
   * Number: `4111 1111 1111 1111`
   * CVV: `123`
